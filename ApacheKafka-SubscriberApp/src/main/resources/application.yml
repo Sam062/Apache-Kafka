@@ -1,0 +1,13 @@
+server:
+  port: 9936
+spring:
+  banner:
+    location: classpath:apacheKafkaBanner.txt
+  kafka:
+    consumer:
+      bootstrap-servers:
+      - localhost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: DEMO
+      auto-offset-reset: earliest
